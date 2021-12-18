@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:provider_exp1/button/counter_viewmodel.dart';
 
 class ButtonCounterPlus extends StatelessWidget {
   const ButtonCounterPlus({Key? key}) : super(key: key);
@@ -17,7 +19,7 @@ class ButtonCounterPlus extends StatelessWidget {
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24.0)),
         textColor: Colors.black,
         color: Colors.amber[100],
-        onPressed: () {},
+        onPressed: () => context.read<CounterViewmodel>().incrementValue(),
       ),
     );
   }

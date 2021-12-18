@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:provider_exp1/button/counter_viewmodel.dart';
 
 class ButtonCounterMin extends StatelessWidget {
-  final Function decrement;
-  const ButtonCounterMin({Key? key, required this.decrement}) : super(key: key);
+  const ButtonCounterMin({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +19,7 @@ class ButtonCounterMin extends StatelessWidget {
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24.0)),
         textColor: Colors.black,
         color: Colors.amber[100],
-        onPressed: () => decrement(),
+        onPressed: () => context.read<CounterViewmodel>().decrementValue(),
       ),
     );
   }
