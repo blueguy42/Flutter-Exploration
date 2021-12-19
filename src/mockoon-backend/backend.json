@@ -4,7 +4,7 @@
   "name": "Koperasi",
   "endpointPrefix": "",
   "latency": 0,
-  "port": 3008,
+  "port": 5000,
   "routes": [
     {
       "uuid": "be581389-9497-4897-bb35-42631519f661",
@@ -156,7 +156,7 @@
       "value": ""
     }
   ],
-  "hostname": "0.0.0.0",
+  "hostname": "127.0.0.1",
   "tlsOptions": {
     "enabled": false,
     "type": "CERT",
