@@ -1,0 +1,169 @@
+{
+  "uuid": "f1e1091c-b51c-4ecf-bfa0-3433665d26cb",
+  "lastMigration": 19,
+  "name": "Koperasi",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3008,
+  "routes": [
+    {
+      "uuid": "be581389-9497-4897-bb35-42631519f661",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "login",
+      "responses": [
+        {
+          "uuid": "390af3e3-2825-4cc1-a6f7-a563c618a7f3",
+          "body": "",
+          "latency": 0,
+          "statusCode": 401,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false
+        },
+        {
+          "uuid": "ed9d3853-24ee-4403-8878-541218b8da2f",
+          "body": "{\n  \"status\":\"SUCCESS\",\n  \"message\":\"\",\n  \"data\":{\n    \"id\" : \"U001\",\n    \"name\" : \"Bill Gates\",\n    \"gender\" : \"Male\",\n    \"email\" : \"bill@enigmacamp.com\",\n    \"address\" : \"Jl H Dahlan\",\n    \"Age\" : 66,\n    \"job\" : \"Businessman\"\n  }\n} ",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "username",
+              "value": "enigma",
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "password",
+              "value": "123",
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false
+        }
+      ],
+      "enabled": true,
+      "randomResponse": false,
+      "sequentialResponse": false
+    },
+    {
+      "uuid": "4cd53b67-5ea7-4703-99ec-2700a7e9dd9d",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "loan",
+      "responses": [
+        {
+          "uuid": "57146188-afbf-43ed-a95d-0b09bf1a93f7",
+          "body": "{\n  \"status\":\"SUCCESS\",\n  \"message\":\"Your Loan request is sucess and being process\",\n   \"data\":{}\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false
+        }
+      ],
+      "enabled": true,
+      "randomResponse": false,
+      "sequentialResponse": false
+    },
+    {
+      "uuid": "40924672-afb3-4ff3-8a59-996eb5d58ddb",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "saving",
+      "responses": [
+        {
+          "uuid": "7e799b2d-9b6f-4ee6-94f3-56dd07dd1f7d",
+          "body": "{\n  \"status\":\"SUCCESS\",\n  \"message\":\"Your Saving request is sucess and being process\",\n  \"data\":{}\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false
+        }
+      ],
+      "enabled": true,
+      "randomResponse": false,
+      "sequentialResponse": false
+    },
+    {
+      "uuid": "d057928c-2f5e-49c5-87ed-151d9d5c2773",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "profile",
+      "responses": [
+        {
+          "uuid": "e7213220-4ac9-44bd-bd9c-774feed7481f",
+          "body": "{\n  \"status\":\"SUCCESS\",\n  \"message\":\"Your profile updated\",\n  \"data\":{\n    \"name\" : \"Enigmacamp\",\n    \"gender\" : \"Male\",\n    \"email\" : \"enigma@camp.com\",\n    \"address\" : \"Jl H Dahlan No.75 Ragunan\",\n    \"dateOfBirth\" : \"2019-01-01\",\n    \"maritalStatus\" : \"Single\",\n    \"status\" : \"active\",\n    \"education\" : \"Bachelor\",\n    \"phone\" : \"+62xxx\",\n    \"religion\" : \"xxx\",\n    \"motherMaiden\" : \"STI\",\n    \"fixedIncome\" : \"xxx\",\n    \"placeOfBirth\" : \"Jakarta\"\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false
+        }
+      ],
+      "enabled": true,
+      "randomResponse": false,
+      "sequentialResponse": false
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "hostname": "0.0.0.0",
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  }
+}
